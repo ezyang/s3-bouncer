@@ -5,7 +5,6 @@ import uuid
 import dns.resolver
 
 app = Flask(__name__)
-app.debug = True
 
 @app.route('/')
 def main():
