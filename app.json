@@ -1,0 +1,24 @@
+{
+  "name": "s3-bouncer",
+  "description": "Issue rights to upload/download to an S3 bucket.",
+  "repository": "https://github.com/ezyang/s3-bouncer",
+  "logo": "https://raw.githubusercontent.com/ezyang/s3-bouncer/master/s3-bouncer.png",
+  "keywords": ["aws", "s3"],
+  "env": {
+      "AWS_ACCESS_KEY_ID": {
+          "description": "Access key ID for an AWS account that has read/write/get_tag/put_tag permissions to the bucket"
+      },
+      "AWS_SECRET_ACCESS_KEY": {
+          "description": "Secret key for the above AWS account."
+      },
+      "AWS_DEFAULT_REGION": {
+          "description": "Region your S3 bucket lives in, e.g., us-east-1"
+      },
+      "S3_BOUNCER_BUCKET": {
+          "description": "Bucket to read/write"
+      },
+      "S3_BOUNCER_DNS_WHITELIST": {
+          "description": "Only allow put requests which originate from the A records of this hostname; blank to disable, e.g., nat.travisci.net"
+      }
+  }
+}
